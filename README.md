@@ -15,21 +15,29 @@
 
 ### Настройка и запуск
 
-Клонируйте данный репозиторий:
+**Авторизуйтесь на GitHub Docker Repository:**
+
+```bash
+$ cat ~/TOKEN.txt | docker login docker.pkg.github.com -u USERNAME --password-stdin
+``` 
+
+В файле `~/TOKEN.txt` должен быть персональный GitHub токен. Вместо `USERNAME` указать логин на GitHub.
+
+**Клонируйте данный репозиторий:**
 
 ```bash
 $ git clone https://github.com/yoyofit/yoyo_docker.git yoyo.fit
 $ cd yoyo.fit
 ```
 
-Настройте параметры окружения:
+**Настройте параметры окружения:**
 
 ```bash
 $ cp example.env .env
 $ vi .env
 ```
 
-Запустите сервер:
+**Запустите сервер:**
 
 ```bash
 $ docker-compose up -d
