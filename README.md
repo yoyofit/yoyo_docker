@@ -40,7 +40,7 @@ $ vi .env
 **Инициализируйте сервер:**
 
 ```bash
-$ ./appctrl init
+$ docker-compose run yoyo init
 ```
 
 **Запустите сервер:**

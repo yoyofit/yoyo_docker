@@ -22,7 +22,7 @@ services:
   caddy:
     image: lgatica/django-caddy:latest
     links:
-      - yoyo:django
+      - yoyo:djang
     environment:
       - PORT=8000
     ports:
