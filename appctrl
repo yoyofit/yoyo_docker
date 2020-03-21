@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+RED='\033[0;31m'
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
+
+intro() {
+  echo "использование: ./appctrl [arg] ..."
+  echo
+  echo "Запуск проекта:"
+  echo
+  echo "    ${BOLD}init${NORMAL}         инициализация БД, загрузка городов и создание суперпользователя."
+  echo
+}
+
+invalid_argument() {
+  echo -e "Неверный аргумент: ${RED}$1${NORMAL}"
+  echo "Запустите данный скрипт без аргументов, чтобы увидеть список доступных аргументов."
+  exit 1
+}
+
+init() {
+  docker-compose run --rm yoyo ./dev init_in_docker
+}
+
+case $1 in
+  "" )
+    intro ;;
+  "init" )
+    init ;;
+  *)
+    invalid_argument $1
+esac

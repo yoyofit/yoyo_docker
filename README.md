@@ -37,15 +37,19 @@ $ cp example.env .env
 $ vi .env
 ```
 
+**Инициализируйте сервер:**
+
+```bash
+$ ./appctrl init
+```
+
 **Запустите сервер:**
 
 ```bash
 $ docker-compose up -d
 ```
 
-
 PROFIT!
-
 
 ### Обновление сервера
 
