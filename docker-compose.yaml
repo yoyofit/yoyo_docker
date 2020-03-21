@@ -9,7 +9,7 @@ services:
     ports:
       - '127.0.0.1:5432:5432'
   yoyo:
-    image: docker.pkg.github.com/yoyofit/yoyo.fit/yoyo:1.0
+    image: docker.pkg.github.com/yoyofit/yoyo.fit/yoyo:1.1
     env_file:
       - .env
     depends_on:
