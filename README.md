@@ -53,4 +53,9 @@ PROFIT!
 
 ### Обновление сервера
 
-...
+```bash
+$ git pull
+$ docker-compose stop
+$ docker-compose pull yoyo
+$ docker-compose up -d
+```
