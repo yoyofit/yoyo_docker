@@ -10,6 +10,7 @@ intro() {
   echo "Запуск проекта:"
   echo
   echo "    ${BOLD}init${NORMAL}         инициализация БД, загрузка городов и создание суперпользователя."
+  echo "    ${BOLD}start${NORMAL}        запуск проекта."
   echo
 }
 
@@ -23,11 +24,23 @@ init() {
   docker-compose run --rm yoyo ./dev init_in_docker
 }
 
+start_in_background() {
+  docker-compose up -d
+}
+
+stop() {
+  docker-compose stop
+}
+
 case $1 in
   "" )
     intro ;;
   "init" )
     init ;;
+  "start" )
+    start_in_background ;;
+  "stop" )
+    stop ;;
   *)
     invalid_argument $1
 esac
