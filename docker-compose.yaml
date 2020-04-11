@@ -5,7 +5,7 @@ services:
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /home/admin/.docker/config.json:/config.json
+      - /home/ubuntu/.docker/config.json:/config.json
     command: --interval 30 --label-enable
     environment:
       - WATCHTOWER_LIFECYCLE_HOOKS=true
