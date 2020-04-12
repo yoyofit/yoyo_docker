@@ -23,7 +23,7 @@ services:
     env_file:
       - .env
     labels:
-      com.centurylinklabs.watchtower.lifecycle.post-update: "update"
+      com.centurylinklabs.watchtower.lifecycle.post-update: "/srv/yoyo/entrypoint.sh update"
       com.centurylinklabs.watchtower.enable: "true"
     depends_on:
       - postgres
